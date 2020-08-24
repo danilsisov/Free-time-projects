@@ -10,7 +10,6 @@ BANK RECORD
 
 
 #include "decoration.h"
-#include "decoration.cpp"
 #include "menu.h"
 #include "memory.h"
 
