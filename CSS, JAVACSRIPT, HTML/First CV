@@ -1,0 +1,150 @@
+ <!DOCTYPE HTML>
+<html lang="en"
+<head> 
+<meta charset="utf-8">
+<meta name="CV" content="width=Cv-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<script defer src="jquery-3.3.1.slim.min.js"></script>
+<script defer src="popper.min.js"></script>
+<script defer src="bootstrap.min.js"></script>
+<title>CV Danil</title>
+</head>
+<body style="background-color:rgb(167, 167, 167);"></bodystyle> 
+    <div class="container-fluid">
+        <div>
+            <table border="1" align="center" width-"60%">
+                <tr>
+            <th> <h1> Danil Sisov CV </h1></th>
+                </table>
+                <hr>
+                <p>
+                        <div class="row">
+                        <div clas="col-lg-4">
+                            <img src="cv.jpg" class="img-fluid rounded" width="150" height="190"
+                        </div>
+                    </div>
+                    <p>
+                    <div class="col-lg-4" style="background-color: honeydew">
+                                <h3>CV Highlights</h3>
+                                <p>
+                                <ul>
+                                    <li>Danil Sisov</li>
+                                    <li>Men</li>
+                                    <li>Finland, Vaanta</li>
+                                    <li>07.08.2000</li>
+                                    <li>danil.sisov@metropolia.fi</li>
+                                    <li>+358 40 157 3006</li>
+                                     </ul>
+                                </div>
+                                 <div class="col-lg-4" style="background-color: rgb(198, 231, 198)">
+                                </p>
+                                <h3>Professional Experience</h3>
+                                <h5 id="company-name">Maxima XX- Estonia Sillamae (2019)</h5>
+                                <p id="job-title"><strong>Shop assistent </strong></p>
+                                <p>
+                                <h6><strong>skills in my previous job</strong></h6>
+                                <ul>
+                                    <li>help for people</li>
+                                    <li>Give information about the features, quality and availability of different products.</li>
+                                    <li>Handle the payment for any purchases.</li>
+                                    <li>Advise the customer of information relating to their purchase, such as its warranty or how to look after it.</li>
+                                </ul>
+                                </div>
+                                <div class="col-lg-4" style="background-color: rgb(245, 181, 237)">
+                                </p>
+                                <h3>Education</h3>
+                                <table>
+                                    <tr id="heading">
+                                        
+                                        <td><strong>Name</strong></td>
+                                        <td><strong>Location</strong></td>
+                                        <td><strong>dimploma</strong></td>
+                                        <td><strong>Years</strong></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Metropolia University of Applied Science</td>
+                                        <td>Finland, Espoo</td>
+                                        <td>Bachelor degree dimpolma</td>
+                                        <td>2019-2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sillamae gymnasium</td>
+                                        <td>Estonia, Sillamae </td>
+                                        <td>Secondary school dimploma</td>
+                                        <td>2016-2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sillamae Vanalinna kool</td>
+                                        <td>Estonia, Sillamae</td>
+                                        <td>Middle school diploma</td>
+                                        <td>2007-2016</td>
+                                    </tr>
+                                    <tr>
+                                </table>
+                                 </div>
+                                 <div class="col-lg-4" style="background-color: rgb(225, 241, 185)">
+                                <h3>Courses in Metropolia</h3>
+                                <p>
+                                <ul>
+                                    <li>
+                                    <span id="course-name">HTML & CSS for Beginners </li>
+                                    <li>
+                                    <span id="course-name">JavaScript – Programming Basics </li>
+                                    <li>
+                                    <span id="course-name">Industrial managment </li>
+                                </ul>
+                                </div>
+                                <div class="col-lg-4" style="background-color: rgb(207, 164, 164)">
+                                <h3>Technical Skills</h3>
+                                <p>
+                                <ul>
+                                    <li>
+                                    <span id="course-name">Operating Systems:</span> Windows 2000, Windows XP, Windows Vista, Windows 7, Macintosh Computers (OS X), Linux (Mint, Debian)</li>
+                                    <li>
+                                    <span id="course-name">Application Software:</span> Office 2007, Office for Mac 2011, iWork ’09, Pages</li>
+                                    <li>
+                                    <span id="course-name">Programming Skills:</span>learining HTML, CSS, JavaScript</li></ul>
+                                </p>
+                                </div>
+                                <div class="col-lg-4" style="background-color: rgb(236, 236, 219)">
+                                <h3>Certifications</h3>
+                                <p>
+                                <ul>
+                                    <li>English language (B2) </li>
+                                    <li>Estonian language (B2)</li>
+                                    <li>Driving liecens since 2018 </li>
+                                </p>
+                                </div>
+                                <div class="col-lg-4" style="background-color: rgb(162, 218, 210)">
+                                <h3>Personal Information:</h3>
+                                <p>
+                                <ul>
+                                    <li>
+                                    A young, determined hard and smart working person. I believe in task based roles and complete ownership of work. And I'm really self-motivated person and every day I would like to know more and more usfull inforamation and skills for my job.
+                                    <li>
+                                    <span id="course-name">Languages Known:</span>English, Estonia, Russia</li>
+                                    <li>
+                                    <span id="course-name">Hobbies:</span>I love reading IT related books / magazines, playing computer games, football, listening music, surfing Internet, self-learning through e-courses.</li> </ul>
+                                </p>
+                                </div>
+                                <div class="col-lg-4" style="background-color: rgb(233, 212, 156)">
+                                <h3>Other Information</h3>
+                                <p>
+                                <ul>
+                                    <li>
+                                    <span id="course-name">Area of Interest:</span>Software Development, Programming, Start-ups, Coding, App Development, Technical Support, Support Engineer, Analyst, Business Analysis</li>
+                                    <li>
+                                    <span id="course-name">Joining Date:</span>Immediate</li></ul>
+                                </p>
+                                </div>
+                         </div>
+                         <div id="footer"></div>
+                         <hr>
+                        <footer> Danil Sisov 2019</footer>
+
+        </div>
+        </div>
+
+</body>
+</html>
