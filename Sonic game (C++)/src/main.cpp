@@ -24,49 +24,101 @@ String TileMap[H] = {
 "B                                                                                                                           B",
 "B      OOOOOOOOO                                                                                                            B",
 "B      BBBBBBBBBOOO                                                                                                         B",
-"B          BBBBBBBBOO                                                                                                       B",
-"BO         BBBBBBBBBBOOOOO      OOOOOOOOO                                                                                   B",
-"BB         BBBBBBBBBBBBBBB      BBBBBBBOOOOO                                                                             B",
-"B          BBBB                         BBBB                                                                              B",
-"B          BBBB                         BBBB                                                                             B",
-"B          BBBB                         BBBB                                                                               B",
-"B     OOO  BBBB                         BBBB                                                                              B",
-"B     BBB  BBBB                         BBBB                                                                              B",
-"B          BBBB                         BBBB                                                                              B",
-"B          BBBB                         BBBB                                                                              B",
-"B          BBBB                         BBBB                                                                              B",
-"BO         BBBB                         BBBB                                                                              B",
-"BB         BBBB                         BBBB                                                                              B",
-"B          BBBB                         BBBB                                                                              B",
-"B           BBB                         BBBB                                                                              B",
-"B      OO    BBB                        BBBB                                                                               B",
-"B      BB     BB                        BBBB                                                                               B",
-"B              B                        BBBB                                                                               B",
-"B             OB                        BBBB                                                                               B",
-"B             BB                        BBBB                                                                               B",
-"B           OOBB                        BBBB                                                                               B",
-"B           BBBB                        BBBB                                                                               B",
-"B           BBBB                        BBBB                                                                               B",
-"B           BBBB                        BBBB                                                                               B",
-"B           BBBB                        BBBB                                                                                 B",
-"B    OOO    BBBB                        BBBB                                                                                 B",
-"B    BBB    BBBB                        BBBB                                                                                B",
-"B           BBBB                        BBBB                                                                                B",
-"B           BBBB                        BBBB                                                                                B",
-"B           BBBB                        BBBB                                                                                B",
-"B        OOOBBBB                        BBBB                                                                               B",
-"B        BBBBBBB                        BBBB                                                                               B",
-"B          OBBBB                        BBBB                                                                               B",
-"B          OBBBB                        BBBB                                                                               B",
-"B          OBBBB                        BBBB                                                                               B",
-"B  OOOOOOOOOBBBO                        BBBB                                                                                B",
-"B  OBBBBBBBBBBBO                        BBBB                                                                                B",
-"BOOOBBBBBBBBBBBB                        OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOB",
-"YYYYYYYYYYYYYYYY                        YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+"B         BBBBBBBBBOO                                                                                                       B",
+"BO         BBBBBBBBBBOOOOO      OOOOOOOO                                                                                    B",
+"BB         BBBBBBBBBBBBBBB      BBBBBBBBOOOO                                                                                B",
+"B          BBBBBBBBBBBB                 BBBB                                                                              B",
+"B          BBBBBBBBBB                   BBBB      OO                                                                     B",
+"B          BBBBBBBB                     BBBB      BB                                                                        B",
+"B     OOO  BBBBBB                       BBBB  BBB BB                                                                        B",
+"B     BBB  BBBB                         BBBB      BB                                                                       B",
+"B          BBBB                         BBBB      BB                                                                       B",
+"B          BBBB                         BBBB      BB                                                                       B",
+"B          BBBB                         BBBB      BB                                                                       B",
+"BO         BBBB                         BBBB      BB                                                                       B",
+"BB         BBBB                         BBBB      BB                                                                       B",
+"B          BBBB                         BBBB      BB        OOOO     O                                                     B",
+"B           BBB                         BBBB      BB      BBBBBB     B                                                     B",
+"B      OO    BBB                        BBBB      BB        BBBB     B                                                     B",
+"B      BB     BB                        BBBB      BB        BBBB     B                                                     B",
+"B              B                        BBBB      BB        BBBB     B                                                     B",
+"B             OB                        BBBB      BB        BBBB     B                                                     B",
+"B             BB                        BBBB      BB        BBBB     B                                                     B",
+"B           OOBB                        BBBB      BB        BBBB     B                                                     B",
+"B           BBBB   BB                   BBBB      BB        BBBB     B                                                     B",
+"B           BBBB   B B                  BBBB      BB        BBBB     B                                                     B",
+"B           BBBB   B  B                 BBBB      BB        BBBB     B                                                     B",
+"B           BBBB   B B                  BBBB      BB        BBBB     B                                                     B",
+"B    OOO    BBBB   BB                   BBBB      BB        BBBB     B                                                     B",
+"B    BBB    BBBB                        BBBB      BB        BBBB     B                                                     B",
+"B           BBBB                        BBBB      BB        BBBB     B                                                     B",
+"B           BBBB    BBB   B  BBBBB      BBBB      BB        BBBB     B                                                     B",
+"B           BBBB    B  B  B    B        BBBB      BB        BBBB     B                                                     B",
+"B        OOOBBBB    BBB   B    B        BBBB      BB        BBBB     B                                                     B",
+"B        BBBBBBB    B     B    B        BBBB      BB        BBBB     B                                                     B",
+"B          OBBBB    B     B    B        BBBB      BB        BBBB     B                                                     B",
+"B          OBBBB                        BBBB      BB        BBBB     B                                                     B",
+"B          OBBBB                        BBBB      BB        BBBB     B                                                     B",
+"B  OOOOOOOOOBBBB                        BBBB      BB        BBBB     B                                                     B",
+"B  OBBBBBBBBBBBB                        BBBB      BB        BBBB     B                                                     B",
+"BOOOBBBBBBBBBBBB                        BBBB      BBOOOOOOOOBBBBOOOOOBOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOB",
+"YYYYYYYYYYYYYYYY                        YYYY      YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
 
 }; 
 
+void menu(RenderWindow & window) {
+	Texture menuTexture1, menuTexture2, menuBackground;
+	menuTexture1.loadFromFile("images/play.png");
+	menuTexture2.loadFromFile("images/quit.png");
+	menuBackground.loadFromFile("images/menu.jpg");
+	Sprite menu1(menuTexture1), menu2(menuTexture2), menuBg(menuBackground);
+	bool isMenu = 1;
+	int menuNum = 0;
+	menu1.setPosition(40, 40);
+	menu2.setPosition(40, 200);
+	menuBg.setPosition(1, 1);
+ 
+	while (isMenu) {
+        Event event;
+         while (window.pollEvent(event)) {
+             if (event.type == Event::Closed)
+            window.close();
+        }
 
+		menu1.setColor(Color::White);
+		menu2.setColor(Color::White);
+		menuNum = 0;
+		window.clear(Color(10, 18, 21));
+ 
+		if (IntRect(40, 40, 230, 230).contains(Mouse::getPosition(window))) {
+             menu1.setColor(Color::Blue); 
+             menuNum = 1; 
+        }
+
+		if (IntRect(40, 200, 230, 230).contains(Mouse::getPosition(window))) { 
+            menu2.setColor(Color::Blue); 
+            menuNum = 2; 
+        }
+
+ 
+		if (Mouse::isButtonPressed(Mouse::Left)) {
+			if (menuNum == 1) {
+                isMenu = false;
+            }
+
+			if (menuNum == 2) { 
+                window.close(); 
+                isMenu = false; 
+            }
+		}
+ 
+		window.draw(menuBg);
+		window.draw(menu1);
+		window.draw(menu2);
+
+		window.display();
+	}
+}
 
 class SONIC  {
     public:
@@ -74,6 +126,7 @@ class SONIC  {
     float dx,dy;
     FloatRect rect;
     bool onGround;
+    bool move = false;
     Sprite sprite;
     float currentFrame;
 
@@ -96,8 +149,8 @@ class SONIC  {
         rect.top += dy * time;
         onGround = false;
         Collision(1);
-        
-        currentFrame += time * 0.008;
+
+            currentFrame += time * 0.008;
             //num of pic
             if(currentFrame > 4) 
             currentFrame -= 4;
@@ -113,8 +166,7 @@ class SONIC  {
         dx = 0;
     }
 
-  void Collision(int dir)
-   {
+  void Collision(int dir) {
      for (int i = rect.top/34 ; i<(rect.top+rect.height)/34; i++)
 	  for (int j = rect.left/34; j<(rect.left+rect.width)/34; j++) { 
 	  	if (TileMap[i][j]=='B') { 
@@ -128,19 +180,20 @@ class SONIC  {
 		    if ((dx<0) && (dir==0)) rect.left =  j*34 + 34;
 			if ((dy>0) && (dir==1))  { rect.top =   i*34 -  rect.height;  dy=0;   onGround=true; }
 			if ((dy<0) && (dir==1))  { rect.top = i*34 + 34;   dy=0;}
-		   }
+		}
+
         if (TileMap[i][j]=='Y') { 
 	        if ((dx>0) && (dir==0)) rect.left =  j*34 -  rect.width; 
 		    if ((dx<0) && (dir==0)) rect.left =  j*34 + 34;
 			if ((dy>0) && (dir==1))  { rect.top =   i*34 -  rect.height;  dy=0;   onGround=true; }
 			if ((dy<0) && (dir==1))  { rect.top = i*34 + 34;   dy=0;}
-		   }
+		}
 		 
 		 if (TileMap[i][j]=='0') { 
 			        TileMap[i][j]=' ';
-		    } 
-        if (TileMap[i][j]=='M') { 
-			    TileMap[i][j]=' ';
+		
+        } 
+         if (TileMap[i][j]=='M') { 
 		    } 
     	}
     }
@@ -149,16 +202,16 @@ class SONIC  {
 
 int main(){
     
-    RenderWindow window(VideoMode(1200, 450), "SFML works!");
+    RenderWindow window(VideoMode(1250, 580), "SFML works!");
+	menu(window);
+    
+    /*
+    Texture tileSet;
+	tileSet.loadFromFile("Mario_tileset.png");
+    Sprite tile(tileSet);*/
 
     Texture sonic;
-    sonic.loadFromFile("sonic.png");
-
-    Texture tileSet;
-	tileSet.loadFromFile("map.png");
-
-    Sprite tile(tileSet);
-
+    sonic.loadFromFile("images/sonic.png");
 
     SONIC s(sonic);
 
@@ -180,13 +233,16 @@ int main(){
                 window.close();
         }
 
-        if(Keyboard::isKeyPressed(Keyboard::Left)) {
+        if(Keyboard::isKeyPressed(Keyboard::Left)) { 
             s.dx = -0.3;
 
         }
+
         if(Keyboard::isKeyPressed(Keyboard::Right)) {
             s.dx = 0.3;
+
         }
+
         if(Keyboard::isKeyPressed(Keyboard::Up)) {
             
             if (s.onGround) {
@@ -204,8 +260,7 @@ int main(){
 
 
 		 for (int i=0; i<H; i++)
-			 for (int j=0; j<W ; j++)
-				{ 
+			 for (int j=0; j<W ; j++) { 
 				  if (TileMap[i][j]=='B') 
                   rectangle.setFillColor(Color::Black);
 
@@ -224,8 +279,9 @@ int main(){
 				  if (TileMap[i][j]==' ') 
                   continue;
 
-		          rectangle.setPosition(j*34-offsetX,i*34 - offsetY) ; 
-		          window.draw(rectangle);
+		          rectangle.setPosition(j*34-offsetX,i*34 - offsetY); 
+   
+		          window.draw(rectangle);   
 	       	 }
     
 		window.draw(s.sprite);
