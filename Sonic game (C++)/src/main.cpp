@@ -4,7 +4,7 @@
 using namespace std;
 using namespace sf;
 
-float offsetX=0, offsetY=0;
+float offsetX = 0, offsetY = 0;
 
 
 const int H = 70;
@@ -67,13 +67,16 @@ String TileMap[H] = {
 }; 
 
 void menu(RenderWindow & window) {
+	
 	Texture menuTexture1, menuTexture2, menuBackground;
 	menuTexture1.loadFromFile("images/play.png");
 	menuTexture2.loadFromFile("images/quit.png");
 	menuBackground.loadFromFile("images/menu.jpg");
 	Sprite menu1(menuTexture1), menu2(menuTexture2), menuBg(menuBackground);
+	
 	bool isMenu = 1;
 	int menuNum = 0;
+	
 	menu1.setPosition(40, 40);
 	menu2.setPosition(40, 200);
 	menuBg.setPosition(1, 1);
@@ -82,7 +85,7 @@ void menu(RenderWindow & window) {
         Event event;
          while (window.pollEvent(event)) {
              if (event.type == Event::Closed)
-            window.close();
+             window.close();
         }
 
 		menu1.setColor(Color::White);
@@ -91,31 +94,30 @@ void menu(RenderWindow & window) {
 		window.clear(Color(10, 18, 21));
  
 		if (IntRect(40, 40, 230, 230).contains(Mouse::getPosition(window))) {
-             menu1.setColor(Color::Blue); 
-             menuNum = 1; 
+             		menu1.setColor(Color::Blue); 
+            	        menuNum = 1; 
         }
 
 		if (IntRect(40, 200, 230, 230).contains(Mouse::getPosition(window))) { 
-            menu2.setColor(Color::Blue); 
-            menuNum = 2; 
+            		menu2.setColor(Color::Blue); 
+            		menuNum = 2; 
         }
 
  
 		if (Mouse::isButtonPressed(Mouse::Left)) {
 			if (menuNum == 1) {
-                isMenu = false;
-            }
+                	isMenu = false;
+       }
 
 			if (menuNum == 2) { 
-                window.close(); 
-                isMenu = false; 
-            }
-		}
+                		window.close(); 
+                		isMenu = false; 
+       }
+}
  
 		window.draw(menuBg);
 		window.draw(menu1);
 		window.draw(menu2);
-
 		window.display();
 	}
 }
@@ -123,7 +125,7 @@ void menu(RenderWindow & window) {
 class SONIC  {
     public:
 
-    float dx,dy;
+    float dx, dy;
     FloatRect rect;
     bool onGround;
     bool move = false;
@@ -194,7 +196,8 @@ class SONIC  {
 		
         } 
          if (TileMap[i][j]=='M') { 
-		    } 
+		 
+		} 
     	}
     }
 };
