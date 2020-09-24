@@ -4,7 +4,7 @@
 using namespace std;
 using namespace sf;
 
-float offsetX = 0, offsetY = 0;
+float offsetX=0, offsetY=0;
 
 
 const int H = 70;
@@ -13,79 +13,76 @@ const int W = 130;
 
 String TileMap[H] = {
 
-"OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-"B                                                                                                                           B",
-"B                                                                                                                           B",
-"B                                                                                                                           B",
-"B                                                                                                                           B",   
-"B                                                                                                                           B",  
-"B                                                                                                                           B",
-"B                                                                                                                           B",
-"B                                                                                                                           B",
-"B      OOOOOOOOO                                                                                                            B",
-"B      BBBBBBBBBOOO                                                                                                         B",
-"B         BBBBBBBBBOO                                                                                                       B",
-"BO         BBBBBBBBBBOOOOO      OOOOOOOO                                                                                    B",
-"BB         BBBBBBBBBBBBBBB      BBBBBBBBOOOO                                                                                B",
-"B          BBBBBBBBBBBB                 BBBB                                                                              B",
-"B          BBBBBBBBBB                   BBBB      OO                                                                     B",
-"B          BBBBBBBB                     BBBB      BB                                                                        B",
-"B     OOO  BBBBBB                       BBBB  BBB BB                                                                        B",
-"B     BBB  BBBB                         BBBB      BB                                                                       B",
-"B          BBBB                         BBBB      BB                                                                       B",
-"B          BBBB                         BBBB      BB                                                                       B",
-"B          BBBB                         BBBB      BB                                                                       B",
-"BO         BBBB                         BBBB      BB                                                                       B",
-"BB         BBBB                         BBBB      BB                                                                       B",
-"B          BBBB                         BBBB      BB        OOOO     O                                                     B",
-"B           BBB                         BBBB      BB      BBBBBB     B                                                     B",
-"B      OO    BBB                        BBBB      BB        BBBB     B                                                     B",
-"B      BB     BB                        BBBB      BB        BBBB     B                                                     B",
-"B              B                        BBBB      BB        BBBB     B                                                     B",
-"B             OB                        BBBB      BB        BBBB     B                                                     B",
-"B             BB                        BBBB      BB        BBBB     B                                                     B",
-"B           OOBB                        BBBB      BB        BBBB     B                                                     B",
-"B           BBBB   BB                   BBBB      BB        BBBB     B                                                     B",
-"B           BBBB   B B                  BBBB      BB        BBBB     B                                                     B",
-"B           BBBB   B  B                 BBBB      BB        BBBB     B                                                     B",
-"B           BBBB   B B                  BBBB      BB        BBBB     B                                                     B",
-"B    OOO    BBBB   BB                   BBBB      BB        BBBB     B                                                     B",
-"B    BBB    BBBB                        BBBB      BB        BBBB     B                                                     B",
-"B           BBBB                        BBBB      BB        BBBB     B                                                     B",
-"B           BBBB    BBB   B  BBBBB      BBBB      BB        BBBB     B                                                     B",
-"B           BBBB    B  B  B    B        BBBB      BB        BBBB     B                                                     B",
-"B        OOOBBBB    BBB   B    B        BBBB      BB        BBBB     B                                                     B",
-"B        BBBBBBB    B     B    B        BBBB      BB        BBBB     B                                                     B",
-"B          OBBBB    B     B    B        BBBB      BB        BBBB     B                                                     B",
-"B          OBBBB                        BBBB      BB        BBBB     B                                                     B",
-"B          OBBBB                        BBBB      BB        BBBB     B                                                     B",
-"B  OOOOOOOOOBBBB                        BBBB      BB        BBBB     B                                                     B",
-"B  OBBBBBBBBBBBB                        BBBB      BB        BBBB     B                                                     B",
-"BOOOBBBBBBBBBBBB                        BBBB      BBOOOOOOOOBBBBOOOOOBOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOB",
-"YYYYYYYYYYYYYYYY                        YYYY      YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+"OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+"B                                                                                                                             B",
+"B                   Y                                    Y                                          Y   YY                    B",
+"B                YYYYY                               YYYYYYY                                        YYYYYYY                   B",
+"B                 YYYYYYY                             YYYYYYYYY                               YY Y        YYY                 B",   
+"B                                         Y                 YYYYYYYYY                         Y  Y Y Y                        B",  
+"B                                         YY  YYY                                             YY Y YY Y YYY                   B",
+"B          C                             YYYYYY                                                                               B",
+"B                                                                      y                      YYY  YYY                        B",
+"B       OOOOOOOOO                                                   y  yy                     YYYYYYY                         B",
+"BC    BBBBBBBBBBBBOOO               C                               yyyyyyy                                                    B",
+"B         BBBBBBBBBOO                                                yyyy                                                     B",
+"BO         BBBBBBBBBBOOOOO      OOOOOOOO                                y                                                     B",
+"BB         BBBBBBBBBBBBBBB 0000 BBBBBBBBOOOO       C                                                                          B",
+"B          BBBBBBBBBBBB    0000   BBBBBBBBBB                                                                                  B",
+"B      C   BBBBBBBBBB      0000     BBBBBBBB      OO                                                                          B",
+"B          BBBBBBBB      00000000     BBBBBB      BB                                                                          B",
+"B     OOO  BBBBBB       0000000000      BBBB      BB                                  BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+"B     BBB  BBBB       00000000000000    BBBB      BB                                 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+"B          BBBB         0000000000      BBBB      BB                                BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+"BC         BBBB           000000        BBBB      BB                               BBBBBBBBBBBBBBBYYYYYYYYYYYBBBBBBBBBBBBBBBBBB",
+"B          BBBB            0000         BBBB      BB                               BBBBBBBBBBBBYYYBBBBBBBBBBBYYYBBBBBBBBBBBBBB",
+"BO         BBBB            0000         BBBB      BB          C      C             BBBBBBBBBBYYBBBBBBBBBBBBBBBBBYYBBBBBBBBBBBBB",
+"BB         BBBB            0000         BBBB      BB                               BBBBBBBBBYBBBBBBBBBBBBBBBBBBBNNYBBBBBBBBBBBB",
+"B       C  BBBB       0000000000000     BBBB      BB        OOOO     O    C        BBBBBBBBBYYYYYYYYYYYYYYYYYYYYYYYBBBBBBBBBBBB",
+"B           BBB                         BBBB      BB        BBBB     B             BBBBBBBBBYBBBBBBBBBBBBBBBBBBBBBYBBBBBBBBBBBB",
+"B      OO    BBBYYYYYYYYYYYYYYYYYYYYYYYYBBBB      BB        BBBB     B    O        BBBBBBBBBYBBBBYYYYYYYYYYYYBBBBBYBBB0000000BB",
+"B      BB     BBY          YY          YBBBB      BB        BBBB     B    B        BBBBBBBBBYBBBBYBBBBBYBBBBYBBBBBYBB00000000BB",
+"B              B Y         YY         Y BBBB      BB        BBBB     B    B        BBBBBBBBBYBBBBYNBBBBYBBBBYBBBBBYBB00000000BB",
+"B            COB  Y        YY        Y  BBBB      BB        BBBB     B    B        BBBBBBBBBYBBBBYYYYYYYYYYYYBBBBBYBBB000000BBB",
+"B             BB   Y       YY       Y   BBBB      BB        BBBB     B    B        BBBBBBBBBYBBBBBBBBBBBBBBBBBBBBBYBBBBBYBBBBBB",
+"B           OOBB    YYYYYYYYYYYYYYYY    BBBB      BB        BBBB     B    B        B00000000YYYYYYYYYYYYYYYYYYYYYYY00000YB0000B",
+"B           BBBB     Y     YY     Y     BBBB      BB        BBBB     B    B        BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+"B           BBBB      Y    YY    Y      BBBB      BB        BBBB     B    B                                                   B",
+"B     C     BBBB      YY   YY   YY      BBBB      BB        BBBB     B    B                                            CCCCC  B",
+"B           BBBB     Y  Y  YY  Y  Y     BBBB      BB        BBBB     B    B                                            CCCCC  B",
+"B    OOO    BBBB    Y    Y YY Y    Y    BBBB      BB        BBBB     B    B                                                   B",
+"B    BBB    BBBB   Y      YYYY      Y   BBBB      BB        BBBB     B    B        OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  B",
+"B           BBBBYYYYYYYYYYYYYYYYYYYYYYYYBBBB      BB        BBBB     B    B        BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB  B",
+"B         C BBBB  Y        YY         Y BBBB      BB        BBBB     B    B        BBBBBBBBYYYYYYBBBBYYBBBBBYBBYYYYYBBBBBBBB  B",
+"B           BBBB   Y      Y  Y       Y  BBBB      BB        BBBB     B    B        BBBBBBBBYBBBBBBBBBYBYBBBBYBBYBBBBYBBBBBBB  B",
+"B        OOOBBBB    Y    Y    Y     Y   BBBB      BB        BBBB     B    B        BBBBBBBBYBBBBBBBBBYBBYBBBYBBYBBBBBYBBBBBB  B",
+"B        BBBBBBB     Y  Y  YY  Y   Y    BBBB      BB        BBBB     B    B        BBBBBBBBYYYYYYYBBBYBBBYBBYBBYBBBBBYBBBBBB  B",
+"B          OBBBBYYYYYYYY  YYYY  Y YYYYYYBBBB      BB        BBBB     B    B        BBBBBBBBYBBBBBBBBBYBBBBYBYBBYBBBBYBBBBBBB  B",
+"B          OBBBBYYYYYYY          YYYYYYYBBBB      BB        BBBB     B    B        BBBBBBBBYYYYYYYYBBYBBBBBYYBBYYYYYYBBBBBBB  B",
+"B          OBBBB     YYYYYYYYYYYYYY     BBBB      BB        BBBB     B    B        BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB  B",
+"B  OOOOOOOOOBBBB    Y YYY  Y  YYY Y     BBBB      BB        BBBB     B    B        BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB  B",
+"B  OBBBBBBBBBBBB   Y  Y Y  Y   Y   Y    BBBB      BB        BBBB     B    B        BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB  B",
+"BOOOBBBBBBBBBBBB  Y   YYY  Y   Y    Y   BBBB      BB        BBBB                   OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  B",
+"BBBBBYYYYYYYYYYYYY    Y    Y   Y     YYYYYYY      YY        YYYY                   YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY  Y",
 
 }; 
 
 void menu(RenderWindow & window) {
-	
 	Texture menuTexture1, menuTexture2, menuBackground;
 	menuTexture1.loadFromFile("images/play.png");
 	menuTexture2.loadFromFile("images/quit.png");
 	menuBackground.loadFromFile("images/menu.jpg");
 	Sprite menu1(menuTexture1), menu2(menuTexture2), menuBg(menuBackground);
-	
 	bool isMenu = 1;
 	int menuNum = 0;
-	
 	menu1.setPosition(40, 40);
-	menu2.setPosition(40, 200);
+	menu2.setPosition(41, 200);
 	menuBg.setPosition(1, 1);
  
 	while (isMenu) {
         Event event;
          while (window.pollEvent(event)) {
              if (event.type == Event::Closed)
-             window.close();
+            window.close();
         }
 
 		menu1.setColor(Color::White);
@@ -94,30 +91,31 @@ void menu(RenderWindow & window) {
 		window.clear(Color(10, 18, 21));
  
 		if (IntRect(40, 40, 230, 230).contains(Mouse::getPosition(window))) {
-             		menu1.setColor(Color::Blue); 
-            	        menuNum = 1; 
+             menu1.setColor(Color::Blue); 
+             menuNum = 1; 
         }
 
 		if (IntRect(40, 200, 230, 230).contains(Mouse::getPosition(window))) { 
-            		menu2.setColor(Color::Blue); 
-            		menuNum = 2; 
+            menu2.setColor(Color::Blue); 
+            menuNum = 2; 
         }
 
  
 		if (Mouse::isButtonPressed(Mouse::Left)) {
 			if (menuNum == 1) {
-                	isMenu = false;
-       }
+                isMenu = false;
+            }
 
 			if (menuNum == 2) { 
-                		window.close(); 
-                		isMenu = false; 
-       }
-}
+                window.close(); 
+                isMenu = false; 
+            }
+		}
  
 		window.draw(menuBg);
 		window.draw(menu1);
 		window.draw(menu2);
+
 		window.display();
 	}
 }
@@ -125,7 +123,7 @@ void menu(RenderWindow & window) {
 class SONIC  {
     public:
 
-    float dx, dy;
+    float dx,dy;
     FloatRect rect;
     bool onGround;
     bool move = false;
@@ -185,19 +183,21 @@ class SONIC  {
 		}
 
         if (TileMap[i][j]=='Y') { 
-	        if ((dx>0) && (dir==0)) rect.left =  j*34 -  rect.width; 
-		    if ((dx<0) && (dir==0)) rect.left =  j*34 + 34;
-			if ((dy>0) && (dir==1))  { rect.top =   i*34 -  rect.height;  dy=0;   onGround=true; }
-			if ((dy<0) && (dir==1))  { rect.top = i*34 + 34;   dy=0;}
+	        TileMap[i][j]=' ';
+		}
+
+        if (TileMap[i][j]=='C') { 
+	        TileMap[i][j]=' ';
 		}
 		 
 		 if (TileMap[i][j]=='0') { 
 			        TileMap[i][j]=' ';
 		
         } 
+
          if (TileMap[i][j]=='M') { 
-		 
-		} 
+
+		    } 
     	}
     }
 };
@@ -205,9 +205,9 @@ class SONIC  {
 
 int main(){
     
-    RenderWindow window(VideoMode(1250, 580), "SFML works!");
+    RenderWindow window(VideoMode(1250, 580), "Sonic Game by Danil Sisov");
 	menu(window);
-    
+
     /*
     Texture tileSet;
 	tileSet.loadFromFile("Mario_tileset.png");
@@ -259,7 +259,7 @@ int main(){
 		if (s.rect.left > 300) offsetX = s.rect.left - 300;
         offsetY = s.rect.top - 200;
 
-		window.clear(Color::White);
+		window.clear(Color::Blue);
 
 
 		 for (int i=0; i<H; i++)
@@ -268,10 +268,10 @@ int main(){
                   rectangle.setFillColor(Color::Black);
 
                   if (TileMap[i][j]=='Y') 
-                  rectangle.setFillColor(Color::Green);
+                  rectangle.setFillColor(Color::White);
 
                   if (TileMap[i][j]=='O') 
-                  rectangle.setFillColor(Color::White);
+                  rectangle.setFillColor(Color::Blue);
 
 			      if (TileMap[i][j]=='0')  
                   rectangle.setFillColor(Color::Green);
@@ -279,13 +279,17 @@ int main(){
                   if (TileMap[i][j]=='M')  
                   rectangle.setFillColor(Color::White);
 
+                  if (TileMap[i][j]=='C')  
+                  rectangle.setFillColor(Color::Yellow);
+
 				  if (TileMap[i][j]==' ') 
                   continue;
 
 		          rectangle.setPosition(j*34-offsetX,i*34 - offsetY); 
    
-		          window.draw(rectangle);   
+		          window.draw(rectangle);
 	       	 }
+                
     
 		window.draw(s.sprite);
         window.display();
