@@ -218,6 +218,6 @@ int main()
 }
 
 
-//g++ macsnake.cc -o macsnake -lncurses./macsnake
+
 //g++ snakegame.cc -o game -lncurses./snakegame
 //
