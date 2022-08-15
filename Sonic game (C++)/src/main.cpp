@@ -234,17 +234,17 @@ int main(){
                 window.close();
         }
 
-        if(Keyboard::isKeyPressed(Keyboard::Left)) { 
+        if (Keyboard::isKeyPressed(Keyboard::Left)) { 
             s.dx = -0.3;
 
         }
 
-        if(Keyboard::isKeyPressed(Keyboard::Right)) {
+        if (Keyboard::isKeyPressed(Keyboard::Right)) {
             s.dx = 0.3;
 
         }
 
-        if(Keyboard::isKeyPressed(Keyboard::Up)) {
+        if (Keyboard::isKeyPressed(Keyboard::Up)) {
             
             if (s.onGround) {
                 s.dy = -1.2;
