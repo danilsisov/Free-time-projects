@@ -185,14 +185,14 @@ class SONIC  {
 
         if (TileMap[i][j] == 'Y') { 
 	        TileMap[i][j] = ' ';
-		}
+	}
 
         if (TileMap[i][j] == 'C') { 
 	        TileMap[i][j] = ' ';
-		}
+	}
 		 
-		 if (TileMap[i][j] == '0') { 
-			        TileMap[i][j] = ' ';
+	if (TileMap[i][j] == '0') { 
+		TileMap[i][j] = ' ';
 		
         } 
 
