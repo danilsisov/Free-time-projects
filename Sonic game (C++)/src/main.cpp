@@ -4,7 +4,7 @@
 using namespace std;
 using namespace sf;
 
-float offsetX = 0, offsetY = 0 ;
+float offsetX = 0, offsetY = 0;
 
 
 const int H = 70;
