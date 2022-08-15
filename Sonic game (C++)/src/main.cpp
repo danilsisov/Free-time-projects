@@ -12,7 +12,6 @@ const int W = 130;
 
 
 String TileMap[H] = {
-
 "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
 "B                                                                                                                             B",
 "B                   Y                                    Y                                          Y   YY                    B",
@@ -63,7 +62,6 @@ String TileMap[H] = {
 "B  OBBBBBBBBBBBB   Y  Y Y  Y   Y   Y    BBBB      BB        BBBB     B    B        BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB  B",
 "BOOOBBBBBBBBBBBB  Y   YYY  Y   Y    Y   BBBB      BB        BBBB                   OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  B",
 "BBBBBYYYYYYYYYYYYY    Y    Y   Y     YYYYYYY      YY        YYYY                   YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY  Y",
-
 }; 
 
 void menu(RenderWindow & window) {
@@ -191,8 +189,7 @@ class SONIC  {
 	}
 		 
 	if (TileMap[i][j] == '0') { 
-		TileMap[i][j] = ' ';
-		
+		TileMap[i][j] = ' ';		
         } 
 
          if (TileMap[i][j]=='M') {} 
@@ -236,12 +233,10 @@ int main(){
 
         if (Keyboard::isKeyPressed(Keyboard::Left)) { 
             s.dx = -0.3;
-
         }
 
         if (Keyboard::isKeyPressed(Keyboard::Right)) {
             s.dx = 0.3;
-
         }
 
         if (Keyboard::isKeyPressed(Keyboard::Up)) {
@@ -255,7 +250,7 @@ int main(){
         s.update(time);
 
 		if (s.rect.left > 300) offsetX = s.rect.left - 300;
-        offsetY = s.rect.top - 200;
+       		 offsetY = s.rect.top - 200;
 
 		window.clear(Color::Blue);
 
@@ -289,6 +284,5 @@ int main(){
 		window.draw(s.sprite);
         window.display();
     }
-
     return 0;
 }
