@@ -116,13 +116,12 @@ void menu(RenderWindow & window) {
 
 class SONIC  {
     public:
-
-    float dx, dy;
-    FloatRect rect;
-    bool onGround;
-    bool move = false;
-    Sprite sprite;
-    float currentFrame;
+    	float dx, dy;
+    	FloatRect rect;
+    	bool onGround;
+    	bool move = false;
+    	Sprite sprite;
+    	float currentFrame;
 
     SONIC (Texture &image) {
         sprite.setTexture(image);
