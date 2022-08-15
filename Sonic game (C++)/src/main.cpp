@@ -4,7 +4,7 @@
 using namespace std;
 using namespace sf;
 
-float offsetX=0, offsetY=0;
+float offsetX = 0, offsetY =0 ;
 
 
 const int H = 70;
@@ -82,40 +82,34 @@ void menu(RenderWindow & window) {
         Event event;
          while (window.pollEvent(event)) {
              if (event.type == Event::Closed)
-            window.close();
-        }
-
+            	window.close();
+	 }	
+		
 		menu1.setColor(Color::White);
 		menu2.setColor(Color::White);
 		menuNum = 0;
 		window.clear(Color(10, 18, 21));
  
 		if (IntRect(40, 40, 230, 230).contains(Mouse::getPosition(window))) {
-             menu1.setColor(Color::Blue); 
-             menuNum = 1; 
-        }
-
+             		menu1.setColor(Color::Blue); 
+             		menuNum = 1; 
+        	}
 		if (IntRect(40, 200, 230, 230).contains(Mouse::getPosition(window))) { 
-            menu2.setColor(Color::Blue); 
-            menuNum = 2; 
-        }
-
- 
+            		menu2.setColor(Color::Blue); 
+            		menuNum = 2; 
+       		}
 		if (Mouse::isButtonPressed(Mouse::Left)) {
 			if (menuNum == 1) {
-                isMenu = false;
-            }
-
+                		isMenu = false;
+            		}
 			if (menuNum == 2) { 
-                window.close(); 
-                isMenu = false; 
-            }
+                		window.close(); 
+                		isMenu = false; 
+            		}
 		}
- 
 		window.draw(menuBg);
 		window.draw(menu1);
 		window.draw(menu2);
-
 		window.display();
 	}
 }
@@ -123,7 +117,7 @@ void menu(RenderWindow & window) {
 class SONIC  {
     public:
 
-    float dx,dy;
+    float dx, dy;
     FloatRect rect;
     bool onGround;
     bool move = false;
@@ -145,7 +139,7 @@ class SONIC  {
         Collision(0);
 
         if(!onGround) 
-        dy = dy + 0.0035*time;
+        dy = dy + 0.0035 * time;
         rect.top += dy * time;
         onGround = false;
         Collision(1);
@@ -155,11 +149,11 @@ class SONIC  {
             if(currentFrame > 4) 
             currentFrame -= 4;
             //left (mirror than right)
-           if (dx<0) 
-           sprite.setTextureRect(IntRect(80*int(currentFrame)+75.2,95,-75.4,100));
+           if (dx < 0) 
+           sprite.setTextureRect(IntRect(80*int(currentFrame)+75.2, 95, -75.4, 100));
 
-           if (dx>0) 
-           sprite.setTextureRect(IntRect(80*int(currentFrame),95,75.2,100));
+           if (dx > 0) 
+           sprite.setTextureRect(IntRect(80*int(currentFrame),95, 75. 2, 100));
         
         sprite.setPosition(rect.left - offsetX, rect.top - offsetY);
 
@@ -167,37 +161,42 @@ class SONIC  {
     }
 
   void Collision(int dir) {
-     for (int i = rect.top/34 ; i<(rect.top+rect.height)/34; i++)
-	  for (int j = rect.left/34; j<(rect.left+rect.width)/34; j++) { 
-	  	if (TileMap[i][j]=='B') { 
-	        if ((dx>0) && (dir==0)) rect.left =  j*34 -  rect.width; 
-		    if ((dx<0) && (dir==0)) rect.left =  j*34 + 34;
-			if ((dy>0) && (dir==1))  { rect.top =   i*34 -  rect.height;  dy=0;   onGround=true; }
-			if ((dy<0) && (dir==1))  { rect.top = i*34 + 34;   dy=0;}
+     for (int i = rect.top / 34 ; i < (rect.top + rect.height) / 34; i++)
+	  for (int j = rect.left / 34; j < (rect.left + rect.width) / 34; j++) { 
+	  	if (TileMap[i][j] == 'B') { 
+	        if ((dx > 0) && (dir == 0)) rect.left =  j*34 -  rect.width; 
+		    if ((dx < 0) && (dir == 0)) rect.left =  j*34 + 34;
+			if ((dy > 0) && (dir == 1))  { rect.top =   i*34 -  rect.height;  dy = 0;   onGround = true; }
+			if ((dy < 0) && (dir == 1))  { rect.top = i*34 + 34;   dy = 0;}
 		   }
-        if (TileMap[i][j]=='O') { 
-	        if ((dx>0) && (dir==0)) rect.left =  j*34 -  rect.width; 
-		    if ((dx<0) && (dir==0)) rect.left =  j*34 + 34;
-			if ((dy>0) && (dir==1))  { rect.top =   i*34 -  rect.height;  dy=0;   onGround=true; }
-			if ((dy<0) && (dir==1))  { rect.top = i*34 + 34;   dy=0;}
+        if (TileMap[i][j] == 'O') { 
+	        if ((dx > 0) && (dir == 0)) rect.left =  j*34 -  rect.width; 
+		    if ((dx < 0) && (dir == 0)) rect.left =  j*34 + 34;
+			if ((dy > 0) && (dir == 1))  { 
+				rect.top =   i*34 -  rect.height;  
+				dy = 0;   
+				onGround = true; 
+			}
+			if ((dy < 0) && (dir == 1))  { 
+				rect.top = i*34 + 34;   
+				dy = 0;
+			}
 		}
 
-        if (TileMap[i][j]=='Y') { 
-	        TileMap[i][j]=' ';
+        if (TileMap[i][j] == 'Y') { 
+	        TileMap[i][j] = ' ';
 		}
 
-        if (TileMap[i][j]=='C') { 
-	        TileMap[i][j]=' ';
+        if (TileMap[i][j] == 'C') { 
+	        TileMap[i][j] = ' ';
 		}
 		 
-		 if (TileMap[i][j]=='0') { 
-			        TileMap[i][j]=' ';
+		 if (TileMap[i][j] == '0') { 
+			        TileMap[i][j] = ' ';
 		
         } 
 
-         if (TileMap[i][j]=='M') { 
-
-		    } 
+         if (TileMap[i][j]=='M') {} 
     	}
     }
 };
@@ -221,14 +220,14 @@ int main(){
     float currentFrame = 0;
     Clock clock;
 
-   RectangleShape rectangle( Vector2f(32,32));
+   RectangleShape rectangle( Vector2f(32, 32));
     
     while (window.isOpen()) {
         float time = clock.getElapsedTime().asMicroseconds();
         clock.restart();
 
-        time = time/700;
-        if (time>20) time = 20;
+        time = time / 700;
+        if (time > 20) time = 20;
         
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -262,35 +261,32 @@ int main(){
 		window.clear(Color::Blue);
 
 
-		 for (int i=0; i<H; i++)
-			 for (int j=0; j<W ; j++) { 
-				  if (TileMap[i][j]=='B') 
+		 for (int i = 0; i < H; i++)
+			 for (int j = 0; j < W ; j++) { 
+				  if (TileMap[i][j] == 'B') 
                   rectangle.setFillColor(Color::Black);
 
-                  if (TileMap[i][j]=='Y') 
+                  if (TileMap[i][j] == 'Y') 
                   rectangle.setFillColor(Color::White);
 
-                  if (TileMap[i][j]=='O') 
+                  if (TileMap[i][j] == 'O') 
                   rectangle.setFillColor(Color::Blue);
 
-			      if (TileMap[i][j]=='0')  
+		  if (TileMap[i][j] == '0')  
                   rectangle.setFillColor(Color::Green);
 
-                  if (TileMap[i][j]=='M')  
+                  if (TileMap[i][j] == 'M')  
                   rectangle.setFillColor(Color::White);
 
-                  if (TileMap[i][j]=='C')  
+                  if (TileMap[i][j] == 'C')  
                   rectangle.setFillColor(Color::Yellow);
 
-				  if (TileMap[i][j]==' ') 
+		  if (TileMap[i][j] == ' ') 
                   continue;
-
-		          rectangle.setPosition(j*34-offsetX,i*34 - offsetY); 
-   
-		          window.draw(rectangle);
+		  rectangle.setPosition(j*34 - offsetX, i*34 - offsetY); 
+		  window.draw(rectangle);
 	       	 }
-                
-    
+                   
 		window.draw(s.sprite);
         window.display();
     }
