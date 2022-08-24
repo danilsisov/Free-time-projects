@@ -8,7 +8,6 @@ GUEESS NUMBER GAME
 #include "RE.h"
 #include <cstdlib> // for random
 
-
 using namespace std;
 
 // third screen with name and amout of money
