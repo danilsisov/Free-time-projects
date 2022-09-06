@@ -33,7 +33,6 @@ void decoration::author(){
 }
 
 void decoration::rules() {
-
     cout << "\n";
     cout << "\t\t\tRULES OF THE GAME\n";
     cout << "\t 1. Create your account\n";
